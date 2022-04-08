@@ -38,7 +38,6 @@ import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { NotionPageHeader } from './NotionPageHeader'
 import { GitHubShareButton } from './GitHubShareButton'
-import { HeroHeader } from './HeroHeader'
 
 import styles from './styles.module.css'
 
@@ -111,6 +110,11 @@ const Modal = dynamic(
 const Tweet = ({ id }: { id: string }) => {
   return <TweetEmbed tweetId={id} />
 }
+
+const HeroHeader = dynamic<{ className?: string }>(
+  () => import('./HeroHeader').then((m) => m.HeroHeader),
+  { ssr: false }
+)
 
 const propertyLastEditedTimeValue = (
   { block, pageHeader },
