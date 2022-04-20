@@ -28,10 +28,8 @@ import { Loading } from './Loading'
 import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
 import { PageActions } from './PageActions'
-import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { NotionPageHeader } from './NotionPageHeader'
-import { GitHubShareButton } from './GitHubShareButton'
 
 import styles from './styles.module.css'
 
@@ -179,6 +177,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { resolvedTheme } = useTheme()
 
   const siteMapPageUrl = React.useMemo(() => {
