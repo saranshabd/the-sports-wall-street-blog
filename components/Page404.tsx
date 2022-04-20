@@ -13,9 +13,17 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
 
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1>Notion Page Not Found</h1>
+          <h1>Page Not Found</h1>
 
-          {error ? (
+          <p>
+            Go back to the{' '}
+            <a style={{ textDecoration: 'underline' }} href='/'>
+              home page
+            </a>
+            .
+          </p>
+
+          {/* {error ? (
             <p>{error.message}</p>
           ) : (
             pageId && (
@@ -24,7 +32,7 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
                 accessible.
               </p>
             )
-          )}
+          )} */}
 
           <img
             src='/404.png'
